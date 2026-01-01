@@ -125,7 +125,7 @@
     },
     {
       "parameters": {
-        "sendTo": "siddanthapusravani@gmail.com",
+        "sendTo": "recepient@gmail.com",
         "subject": "=Good Morning! Daily weather forecast of {{ $json.city }} - {{ $json.run_at }}",
         "message": "=Hi!\n{{ `\\n `}}\nGood Morning!! {{ $json.raw_response }}",
         "options": {}
@@ -213,7 +213,7 @@
   "versionId": "c05b4604-67b5-4bbc-b950-df7d7e6c362d",
   "meta": {
     "templateCredsSetupCompleted": true,
-    "instanceId": "cb57aa2799d3ac129efe638ef3a3f1e3b47edc3c94490507c34eb184f69c6cd7"
+    "instanceId": "cb57aa2799d3ac"
   },
   "id": "GR5D8jT7hsPDx8xD",
   "tags": []
