@@ -83,3 +83,67 @@ Outputs
 - Execution date
 - Structured data for storage and email
 
+### 5️⃣ Supabase Node – Data Storage
+- Stores daily weather results in a Supabase Postgres table named weather_logs
+
+Stored fields
+- run_at (timestamp)
+- city
+- temperature
+- temperature_unit
+- condition
+- humidity
+- wind_speed
+- alert_type
+- summary
+- raw_response (JSON)
+
+Configuration
+- Supabase project URL
+- Service role API key
+- Table schema created beforehand
+
+### 6️⃣ Email Node – Daily Notification
+- Sends a daily weather email to the configured recipient
+
+Email content
+- Subject: Daily Weather for <City> – <Date>
+- Body: Weather summary and alert message
+
+Supports plain text or HTML emails.
+
+Things to Configure
+---
+
+#### Node 1 – Cron Trigger
+- Set the time when the workflow should run daily
+
+#### Node 2 – Set Node
+- Configure the city name
+
+#### Node 3 – OpenWeatherMap API
+- Add OpenWeatherMap API key
+- Select metric or imperial units
+
+#### Node 4 – Code Node
+- Customize alert rules or summary formatting if needed
+
+#### Node 5 – Supabase
+- Create weather_logs table
+- Configure Supabase project URL
+- Use Service Role API key for inserts
+
+#### Node 6 – Email Node
+- Configure email credentials (SMTP / Gmail)
+- Set sender and recipient email addresses
+
+### How to Import & Run
+1. Import the provided .json workflow file into n8n
+2. Configure all required credentials
+3. Update the city in the Set node
+4. Run the workflow manually once to test
+5. Enable the workflow to allow daily execution
+
+### Conclusion
+
+This workflow demonstrates an end-to-end automation solution using n8n, combining scheduling, API integration, data processing, persistence, and notification delivery in a clean and maintainable way.
